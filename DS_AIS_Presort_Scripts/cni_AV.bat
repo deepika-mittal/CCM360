@@ -1,0 +1,1 @@
+"D:\Program Files (x86)\SAP BusinessObjects\Data Services/bin/AL_RWJobLauncher.exe "  "C:\ProgramData\SAP BusinessObjects\Data Services/log/JS07_PDI_10157/" -w "inet:DCA-PRO1221:10157"  -C "D:/ccm/CNI/bin/cni_AV.txt"

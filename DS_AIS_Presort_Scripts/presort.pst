@@ -1,0 +1,1432 @@
+********************************************************************************
+*
+*
+* Case 5.1 module name/reference:  presort.pst
+*
+*           Written:    Kashif Bhutta
+*
+*              Date:    Jan. 21 2016
+*
+*           Version:    $Header: presort.pst \main\61 2014/06/11 09:57 UTC u05330 Exp $
+*
+*           Purpose:    CSB Presort Job File
+*
+*  Passed Arguments:
+*
+*     Output Params:    None.
+*
+*       Input Files:    None.
+*
+*      Output Files:    None.
+*
+*    Called Scripts:    None
+*
+*             Exits:    End of Program.
+*
+*      Return Value:    None.
+*
+*
+*     Special Logic:    None.
+*
+********************************************************************************
+*                                Modification Log                              *
+********************************************************************************
+*
+* Programmer          Date            Description
+* ----------          ----            -----------
+*
+********************************************************************************
+BEGIN  General Presort 8.00c.20 ================================
+Job Description (to 80 chars)........ = BFSCSB
+Job Owner (to 20 chars).............. = DTE Energy
+Mail Class (FIRST/PER/STD/PSVC/COMAIL)= first
+END
+
+BEGIN  Execution ===============================================
+Presort (Y/N)........................ = Y
++ Name Optimizer (Y/N)............... = N
++ USPS Optional Procedure (Y/N)...... = N
++ Sequence Output by Mailflow (Y/N).. = N
+Intelligent Mail Barcode(see NOTE)... = IMB
+Create Presort Reports (Y/N)......... = Y
++ On-Demand Reporting (Y/N).......... = N
+Create Address Output File (Y/N)..... = Y
+Create Package Output File (Y/N)..... = Y
+Create Container Output File (Y/N)... = Y
+Create Pallet Output File (Y/N)...... = Y
++ Post to Input File (Y/N)........... = N
+Warn Before File Overwrite (Y/N)..... = Y
+Show Detailed Process Messages (Y/N). = Y
+Save Work Files (Y/N)................ = Y
+Work File Directory (path)........... = D:\CCM\invoices\work\
+END
+
+* NOTE: Intelligent Mail Barcode:
+*       NONE = No Intelligent Mail
+*       IMB  = IMb for letters and flats
+*       IMpb = IMpb for parcels
+
+
+BEGIN  Intelligent Mail ========================================
+Track Serial Nums (Y/N) ............. = n
+IMb/IMpb Job ID (to 8 chars)......... = 
+IMb/IMpb Database (path & imb.s3db).. = 
+Date to Start Tracking (MMDDYYYY).... = 
+Convert Srvc Type ID for Non-Auto(Y/N)= n
+Convert Srvc Type ID Non-Free ACS(Y/N)= y
+Assign Serial for Non-Auto (see NOTE) = unique
+Verify Input Serial Nums Unique (Y/N) = n
+Multiple Mailer IDs per Version (Y/N) = n
+IDEA Handling Unit Uniq CRID(12 chars)= 
+Pallet Mailer ID (6 or 9)............ = 106498
+Pallet Serial Num Start (see Note)... = %PSEED%
+Pallet Serial Num is Alphanum (Y/N).. = n
+IDEA Container Uniq Man CRID(12 chars)= 
+Tray/Sack Mailer ID (6 or 9)......... = 106498
+Tray/Sack Serial Num Start (see Note) = %TSEED%
+Tray/Sack Increment Serial Num (Y/N). = y
+AUTO DIMEN Fields Selection (see Note)= IMB_MID
+END
+
+* NOTE:  Assign Serial for Non-Auto
+*        UNIQUE = all non-auto pieces receive unique serial number
+*        ZERO   = all non-auto pieces receive serial number zero
+*        STATIC = all non-auto pieces receive same non-zero serial number
+*                 chosen by Presort
+* NOTE:  AUTO DIMEN Fields
+* Allows you to control which Intelligent Mail PW fields are included when
+* generating new versions if you use the AUTO DIMEN option for the Action
+* parameter in the Version Defaults block.
+*   
+*        NONE      = No IMb fields will be used to generate new versions
+*        IMB_MID   = pw.imb_mid and pw.imbownrmid (if provided) are used
+*                    to generate new versions
+*        SRVC_TYPE = pw.imb_mid, pw.imbownrmid (if provided), and pw.srvc_type
+*                    are used to generate new versions
+*  
+* NOTE:  Pallet/Tray/Sack Serial Num Start entries:
+*         <number> A user-specified numeric value
+*         AUTO     Use the next available Serial Number from the tracking
+*                  database (‘Track Serial Nums’ in the Intelligent Mail
+*                  block must be set to ‘YES’)
+
+BEGIN  Auxiliary Files =========================================
+USPS Presort Data Folder (See Note).. = 
+ZCF Directory ([path]YYMM_zcf.dir)... = D:\ss\dirs\1409_zcf.dir
+Mail Proc Ctr Dir([path]YYMM_mpc.dir) = D:\ss\dirs\1409_mpc.dir
+PER/PSVC Zone Dir([path]YYMM_zone.dir)= D:\ss\dirs\1409_zone.dir
+PER/STD Del Stats([path]YYMM_dsf.dir) = D:\ss\dirs\1409_dsf.dir
+MailDirect.([path]YYMM_facility.dir). = D:\ss\dirs\1409_facility.dir
+MailDirect.([path]YYMM_maildirect.dir)= D:\ss\dirs\1409_maildirect.dir
+Default Format (path & file.fmt)..... = 
+Default DEF (path & file.def)........ = D:\CCM\invoices\work\presort_in.def
+END
+
+* NOTE  USPS Presort Data Folder
+*       Presort can automatically select the newest valid data directories 
+*       by specifying only the path to the directory location, or you can  
+*       control the directories used by identifying the specific files.
+*  
+*       See the Job File Reference for more information. 
+*  
+
+BEGIN  Input File ==============================================
+Input File Name (path & file name)... = D:\CCM\invoices\work\presort_in.csv
+Override Default Format (path & file) = 
+Override Default DEF (path & file)... = 
++ Filter (to 512 chars).............. = 
+END
+
+BEGIN  Version Description =====================================
+Version Name (to 31 chars)........... = BFSCSB
++ Value in PostWare Field Version_ID. = 
+Bindery Name (to 31 chars)........... = 
+Height (.007 to 100 inches).......... = 4.125
+Width (.007 to 100 inches)........... = 7.813
+Additional selvage height(0 to 1.500) = 0.0
+Additional selvage width (0 to 0.500) = 0.0
+Sample Number of Pieces (1 to 1000).. = 315
+Sample Thickness(0.007 to 1000 inches)= 20.0
+Sample Weight (0.001 to 1120 ounces). = 164.8
+IDEA Piece Weight Source (See Note).. = L
+IDEA Piece Weight Status (See Note).. = F
+Processing Category (see NOTE below). = automated letter
+FLAT is Auto-Compatible (Y/N)........ = N
+FLAT meets Max Deflection DMM201(Y/N) = Y
+STD Flat is a Catalog by DMM201 (Y/N) = N
+Rate Category (see NOTE below)....... = reg
+COMAIL Class of Mail (PER/STD)....... = 
+Automation Barcode Type (See Note)... = full
+IMpb Barcode Length Digits (30/34)... = 
+IMb/IMpb Mailer ID (9 or 6 digits)... = 106498
+IMb/IMpb Serial Num Start (See Note). = %MSEED%
+IMb/IMpb Serial Num Max.............. = 
+IMb/IMpb Increment Serial Number(Y/N) = y
+IMb/IMpb Srvc Type ID/Code (3 digits) = 141
+IMb/IMpb Owner By/For Option(See Note)= MID
+IMb MID is Move Update Supplier (Y/N) = N
+PER IMB Nonsub Srvc Type ID (3 digits)= 
+ACS/Mailer ID Code (to 9 chars)...... = 
+ACS Keyline Length w/o Chk Digit(3-15)= 
+ACS Keyline Data..................... = 
+ACS Keyline Pad (SPACE/SLASH/ZERO)... = space
+Use ACS Keyline 4-char format (Y/N).. = N
+PER IDEA Component IDs (See Note).... = 
+PER Ride-Along Enclosure ID.......... = 
+PER Advertising Percentage........... = 
+PER IDEA Ad Percent Status (See NOTE) = N
+PER Incidental 1C Wt(0.001 to 1120 oz)= 
+RPN Weight (0.001 to 16 oz).......... = 
+PER Publication Name (to 35 chars)... = 
+PER Publication No. (to 15 chars).... = 
+PER Edition Code (to 15 chars)....... = 
+PER Issue Date (to 15 chars)......... = 
+PER Frequency of Issue(to 15 chars).. = 
+PER IDEA Freq of Issue(1 to 365)..... = 1
+PER IDEA Volume Number (to 5 chars).. = 
+PER IDEA Issue Number (to 6 chars)... = 
+PER Publisher Name (to 35 chars)..... = 
+PER Publisher Phone No. (15 chars)... = 
+PER Subscriber Option (see NOTE)..... = assume all
+IDEA MPA Payment Option (See Note)... = other
+IDEA MPA Pstg Payment Method(See Note)= Metered Correct
+CRID of Move Update Supplier(12 chars)= 
+CRID of Piece Uniq Manager (12 chars) = 
+CRID of Mail Owner (to 12 chars)..... = 4041401
+Mailer ID of Mail Owner(see Note).... = 
+CAPS Cust. Ref. ID (to 40 chars)..... = 14895
+Federal Agency Cost Code (to 15 chars)= 
+Contains Reply Env/Card (Y/N)........ = n
+Contains DVD/CD (Y/N)................ = n
+Contains Product Sample (Y/N)........ = n
+Contains One DVD/CD Rnd Trip Only(Y/N)= n
+Content Not Required as FCM (Y/N).... = n
+IDEA CCR File Characteristic Values.. = 
+Permit Holder Name (to 35 chars)..... = DTE Energy
+Permit Holder City (to 13 chars)..... = 
+Permit Holder State (to 2 chars)..... = 
+Permit Holder ZIP+4 (to 9 chars)..... = 482339998
+Permit Holder Address Line 1 (35 chrs)= MMC
+Permit Holder Address Line 2 (35 chrs)= One Energy Plaza
+Permit Holder Address Line 3 (35 chrs)= Detroit, MI 48226-1221
+Permit Holder Telephone No. (15 chars)= 313-235-6835
+Permit Holder DUNS No. (to 9 chars).. = 
+Permit Holder Nonprof Auth No(10 chrs)= 
+Permit No. (to 15 chars)............. = 700
+IDEA Payment Account No.(to 20 chars) = 
+END
+
+*NOTE  Processing Category entries:
+*       AUTOMATED LETTER
+*       MACHINABLE LETTER
+*       NONMACHINABLE LETTER
+*       PER NONAUTOMATION LETTER
+*       AUTOMATED FLAT
+*       PER ALTERNATIVE AUTO FLAT
+*       FLAT
+*       POSTCARD
+*       DOUBLE POSTCARD
+*       MACHINABLE MARKETING PARCEL
+*       IRREGULAR MARKETING PARCEL
+*       MACHINABLE PARCEL
+*       IRREGULAR PARCEL
+*       CMM
+*       1C PARCEL
+*       1C IRREGULAR PARCEL
+* NOTE:  IDEA Piece Weight Source Options
+*        Field may be left blank or may be one of the following:
+*        A = Piece Weight expected live from Agent
+*        C = Piece Weight Calculated as preliminary (from formula)
+*        P = Piece Weight from Postal Service (USPS Clerk)
+*        L = Piece Weight to be implied from Rate
+* NOTE:  IDEA Piece Weight Status and Ad Percentage Status Options:
+*        P = Pending
+*        F = Final
+*        N = None Given
+* NOTE:  PER IDEA Component IDs
+*        To create Mail.dat Component (CPT) entries for a version,
+*        list the ID values, which can be found in the Component
+*        Description blocks, that make up this version.
+*        The first component you list will be designated as the host
+*        component for the Mail Piece Unit (MPU) in the Mail.dat.
+* NOTE  Rate Category entries:
+*       REG      = Regular Rate
+*       NONPROF  = Non-Profit Rate
+*       CLASS    = Classroom Rate
+*       AG       = Science of Agriculture Rate
+*       BPM      = Bound Printed Matter Rate
+*       MEDIA    = Media Mail Rate
+*       LIBRARY  = Library Rate
+* NOTE: IDEA MPA Payment Option entries
+*       DEBIT
+*       CPP
+*       CAPS
+*       OTHER
+*       PVDS
+*       BILLING
+* NOTE: IDEA MPA Postage Payment Method entries
+*       Field may be left blank or may be one of the following:
+*       STAMP
+*       PERMIT
+*       METERED LOWEST
+*       METERED CORRECT
+*       METERED NEITHER
+*       ALT DEL
+*       CASH
+*       PARTIAL PERMIT IMPRINT
+*       GOVT FED USE PERMIT
+*       PER PEND USING PERMIT
+* NOTE: Mailer ID of Mail Owner
+*       If populated, the software uses the value of this parameter as the
+*       Mailer ID of the Mail Owner within the Mail.dat MPA and CPT files,
+*       and/or the Shipping Services File, depending on selected reports.
+*       If blank, the software uses the IMB Mailer ID parameter value.
+* NOTE: Automation Barcode Type entries:
+*       FULL    = Full-Service Intelligent Mail
+*       BASIC   = Basic-Service Intelligent Mail
+*       FROM_SRVC_TYPE    = STIDs are used to determine barcode type
+*       IMPB    = Intelligent Mail Package barcode
+* NOTE: IMb/IMpb Owner By/For Option entries:
+*       MID  = Mailer ID
+*       CRID = Customer Registration ID
+*       BOTH = Mailer ID and Customer Registration ID
+*  
+* NOTE: IMb/IMpb Serial Num Start entries:
+*        <number> A user-specified numeric value
+*        AUTO     Use the next available Serial Number from the tracking
+*                 database (‘Track Serial Nums’ in the Intelligent Mail
+*                 block must be set to ‘YES’)
+
+BEGIN  Entry Point Defaults ====================================
+Entry Point Type (see NOTE).......... = NDC
+Scheme Nums per Entry Pt (see NOTE).. = ALL
+PER/STD/PSVC QFY for DDU Rate (Y/N).. = n
+PER/STD/PSVC Use USPS DDU Data(Y/N).. = y
+Origin Post Office City (to 20 chars) = Detroit
+Origin Post Office State (to 2 chars) = MI
+Origin Post Office ZIP Code (10 chars)= 48233-9997
+eDoc Sender CRID (12 chars).......... = 4041401
+FAST Content ID (9 chars)............ = 
+FAST Scheduler ID (12 chars)......... = 
+Create Undrfill Local 3DG/SCF Ctns Y/N= y
+Min SCF/ASF Local 3DG Pallet Weight.. = 
+Min SCF/ASF Local SCF Pallet Weight.. = 
+Min SCF/ASF Loc 3DG Plt Tray Ft(1-144)= 
+Min SCF/ASF Loc SCF Plt Tray Ft(1-144)= 
+Min Pieces (see NOTE)................ = 500
+Min Pounds (see NOTE)................ = 0
+Estimated Drop Date (MMDDYYYY)....... = $date
+Estimated Drop Time (HHMM)........... = 1530
+Del Window Start Date (MMDDYYYY)..... = 
+Del Window End Date (MMDDYYYY)....... = 
+IDEA Pstg Stmt Mlg Date (MMDDYYYY)... = $date
+IDEA USPS Pick Up (Y/N/NONE)......... = n
+IDEA Scheduled Ship Date (MMDDYYYY).. = 
+IDEA Scheduled Ship Time (HHMM)...... = 
+IDEA CSA Agreement ID (10 chars)..... = 
+IDEA CSA Separation ID (3 chars)..... = 
+Action (ASSIGN LAST EP/IGNORE/ABORT). = ASSIGN LAST EP
+END
+
+* NOTE:  To use specific Presort Schemes in a given Entry Point,
+*        type the scheme numbers to be used for the Entry Point separated
+*        by a comma.  (for example, 1,04,13)
+*        To use all schemes in job file order, set to ALL
+*        Schemes will be processed in JOB FILE ORDER
+* NOTE  Entry Point Type:
+*       NDC        Network Distribution Center
+*       ASF        Auxiliary Service Facility
+*       SCF        Sectional Center Facility
+*       ADC        Area Distribution Center (PER only)
+*       DDU        Destination Delivery Unit
+*       OTHER
+
+BEGIN  Entry Point Description =================================
+Entry Point Name (to 35 chars)....... = SCF Detroit MI (Palletization)
++ Value in PostWare Field Entry_ID... = 
+Entry Point Post Office City (20 chrs)= Detroit
+Entry Point Post Office State (2 chrs)= MI
+Entry Point Post Office ZIP Code (10) = 48233-9997
+Entry Point Drop Site Key (to 9 chars)= 
+Entry Point Type (see NOTE).......... = NDC
+Scheme Nums this Entry Pt (see NOTE). = 1
+Override USPS Mail Direct Disc (Y/N). = n
+PER/STD/PSVC QFY for DDU Rate (Y/N).. = n
+PER/STD/PSVC Use USPS DDU Data(Y/N).. = y
+Origin Post Office City (to 20 chars) = Detroit
+Origin Post Office State (to 2 chars) = MI
+Origin Post Office ZIP Code (10 chars)= 48233-9997
+eDoc Sender CRID (12 chars).......... = 
+FAST Content ID (9 chars)............ = 
+FAST Scheduler ID (12 chars)......... = 
+Create Undrfill Local 3DG/SCF Ctns Y/N= y
+Create Small Service Area Plt (Y/N).. = n
+Min SCF/ASF Local 3DG Pallet Weight.. = 
+Min SCF/ASF Local SCF Pallet Weight.. = 
+Min SCF/ASF Loc 3DG Plt Tray Ft(1-144)= 
+Min SCF/ASF Loc SCF Plt Tray Ft(1-144)= 
+Min Pieces (see NOTE)................ = 500
+Min Pounds (see NOTE)................ = 0
+PER IC Disc Eligibility(ALL/SUB/NONE) = NONE
+PER County of Publication............ = 
+Estimated Drop Date (MMDDYYYY)....... = 
+Estimated Drop Time (HHMM)........... = 
+Appointment Number (12 chars)........ = 
+Del Window Start Date (MMDDYYYY)..... = 
+Del Window End Date (MMDDYYYY)....... = 
+IDEA Pstg Stmt Mlg Date (MMDDYYYY)... = $date
+IDEA USPS Pick Up (Y/N/NONE)......... = n
+IDEA Scheduled Ship Date (MMDDYYYY).. = 
+IDEA Scheduled Ship Time (HHMM)...... = 
+IDEA CSA Agreement ID (10 chars)..... = 
+IDEA CSA Separation ID (3 chars)..... = 
+Range (lower ZIP-upper ZIP).......... = 48000-49999
+PER/STD/PSVC Range QFY for DDU (Y/N). = n
+END
+
+BEGIN  Entry Point Description =================================
+Entry Point Name (to 35 chars)....... = SCF Detroit MI
++ Value in PostWare Field Entry_ID... = 
+Entry Point Post Office City (20 chrs)= Detroit
+Entry Point Post Office State (2 chrs)= MI
+Entry Point Post Office ZIP Code (10) = 48233-9997
+Entry Point Drop Site Key (to 9 chars)= 
+Entry Point Type (see NOTE).......... = NDC
+Scheme Nums this Entry Pt (see NOTE). = 2,3,4
+Override USPS Mail Direct Disc (Y/N). = n
+PER/STD/PSVC QFY for DDU Rate (Y/N).. = n
+PER/STD/PSVC Use USPS DDU Data(Y/N).. = y
+Origin Post Office City (to 20 chars) = Detroit
+Origin Post Office State (to 2 chars) = MI
+Origin Post Office ZIP Code (10 chars)= 48233-9997
+eDoc Sender CRID (12 chars).......... = 
+FAST Content ID (9 chars)............ = 
+FAST Scheduler ID (12 chars)......... = 
+Create Undrfill Local 3DG/SCF Ctns Y/N= y
+Create Small Service Area Plt (Y/N).. = n
+Min SCF/ASF Local 3DG Pallet Weight.. = 
+Min SCF/ASF Local SCF Pallet Weight.. = 
+Min SCF/ASF Loc 3DG Plt Tray Ft(1-144)= 
+Min SCF/ASF Loc SCF Plt Tray Ft(1-144)= 
+Min Pieces (see NOTE)................ = 500
+Min Pounds (see NOTE)................ = 0
+PER IC Disc Eligibility(ALL/SUB/NONE) = NONE
+PER County of Publication............ = 
+Estimated Drop Date (MMDDYYYY)....... = 
+Estimated Drop Time (HHMM)........... = 
+Appointment Number (12 chars)........ = 
+Del Window Start Date (MMDDYYYY)..... = 
+Del Window End Date (MMDDYYYY)....... = 
+IDEA Pstg Stmt Mlg Date (MMDDYYYY)... = $date
+IDEA USPS Pick Up (Y/N/NONE)......... = n
+IDEA Scheduled Ship Date (MMDDYYYY).. = 
+IDEA Scheduled Ship Time (HHMM)...... = 
+IDEA CSA Agreement ID (10 chars)..... = 
+IDEA CSA Separation ID (3 chars)..... = 
+Range (lower ZIP-upper ZIP).......... = 00000-99999
+PER/STD/PSVC Range QFY for DDU (Y/N). = n
+END
+
+*
+* NOTE  Minimum Pieces:       Minimum Pounds:
+*       1C     >= 500         1C     >= 0
+*       PER    >= 0           PER    >= 0
+*       STD    >= 200         STD    >= 50
+*       PSVC(BPM)      >= 300 PSVC   >= 0
+*       PSVC(MEDIA/LIB)>= 300
+
+*******************************************************************************************************
+**
+*		Presort Schemes:
+**
+*		1C          Automation Letters
+*		STD_A   Regular Letters
+*		STD_A   Single Piece
+**
+* DMM 235.6 Presort:
+**
+*******************************************************************************************************
+* NOTE:  To use specific Presort Schemes in a given Entry Point,
+*        type the scheme numbers to be used for the Entry Point separated
+*        by a comma.  (for example, 1,04,13)
+*        To use all schemes in job file order, set to ALL
+*        Schemes will be processed in JOB FILE ORDER
+* NOTE  Entry Point Type:
+*       NDC        Network Distribution Center
+*       ASF        Auxiliary Service Facility
+*       SCF        Sectional Center Facility
+*       ADC        Area Distribution Center (PER only)
+*       DDU        Destination Delivery Unit
+*       OTHER
+******************************************************************
+* DMM 705.8 Presort:
+******************************************************************
+BEGIN  Presort Scheme: 1C, Letter Trays on Pallets =============
+Unqualified Act (CONT/ABORT/ABORT ALL)= cont
+No Sorting After (5DG/SCF/AADC/OMX).. = SCF
+Prepare Automation Rate Trays (Y/N).. = Y
+Prepare Regular Rate Trays (Y/N)..... = Y
+Create 5DG/Scheme Trays (Y/N)........ = Y
+Create 3DG/Scheme Trays (Y/N)........ = Y
+Create Origin/Entry 3DG/S Trays (Y/N) = Y
+Create AADC Trays (Y/N).............. = Y
+Create 5DG Pallets (Y/N)............. = N
+Overflow Trays Option (See Note)..... = OVERFLOW
+Min Auto 5DG/SCH Lvl(150 to 3000/FULL)= 150
+Min Auto 3DG/SCH Lvl(150 to 3000/FULL)= 150
+Min AADC Level (150 to 3000/FULL).... = 150
+Max Package Thickness (3 to 10 in.).. = 4
+Tray Type (See Note)................. = 1&2ft trays
+Min 1 Foot Tray Volume (50 to 95%)... = 85
+Max 1 Foot Tray Volume (50 to 100%).. = 100
+Min 2 Foot Tray Volume (50 to 95%)... = 85
+Max 2 Foot Tray Volume (50 to 100%).. = 100
+Min Tray Feet 5DG Pallet (1 to 144).. = 
+Min Tray Feet SCF Pallet (1 to 144).. = 
+Min Tray Feet AADC Pallet (1 to 144). = 
+Min Tray Feet OMX Pallet (1 to 144).. = 
+Max Tray Feet 5DG Pallet (12 to 144). = 
+Max Tray Feet SCF Pallet (12 to 144). = 
+Max Tray Feet AADC Pallet (12 to 144) = 
+Max Tray Feet OMX Pallet (12 to 144). = 
+Max Wt 5DG Pallet.................... = 
+Max Wt SCF Pallet.................... = 
+Max Wt AADC Pallet................... = 
+Max Wt OMX Pallet.................... = 
+Max Default Tray Feet (72 to 144).... = 144
+Max Default Pallet Wt(1000 to 2200 lb)= 2100
+Max Pallet Volume (75 to 100%)....... = 100
+END
+
+* NOTE  Overflow Trays Option:
+*       OVERFLOW, NONE, REDUCED
+
+* NOTE  Tray Type:
+*       1FT TRAY
+*       2FT TRAY
+*       1&2FT TRAYS
+*       2FT EMM TRAY
+*       2FT EMM & 1FT TRAYS
+
+
+BEGIN  Presort Scheme: 1C, Automation Letters ==================
+Unqualified Act (CONT/ABORT/ABORT ALL)= cont
+No Sorting After (5DG/3DG/ADC)....... = ADC
+Create 5DG/Scheme Trays (Y/N)........ = y
+Create 3DG/Scheme Trays (Y/N)........ = y
+Create Origin/Entry 3DG/S Trays (Y/N) = y
+Create AADC Trays (Y/N).............. = Y
+Overflow Trays Option (See Note)..... = OVERFLOW
+Min 5DG/Scheme Level(150 to 3000/FULL)= 161
+Min 3DG/Scheme Level(150 to 3000/FULL)= 150
+Min AADC Level(150 to 3000/FULL)..... = 150
+Max Package Thickness (3 to 10 in.).. = 4
+Tray Type (see NOTE)................. = 1&2ft trays
+Min 1 Foot Tray Volume (50 to 95%)... = 85
+Max 1 Foot Tray Volume (50 to 100%).. = 100
+Min 2 Foot Tray Volume (50 to 95%)... = 85
+Max 2 Foot Tray Volume (50 to 100%).. = 100
+END
+
+* DMM M130.2 (1C, Retail),     DMM M610.3 (STD, Regular):
+* DMM M130.3 (1C, Machinable), DMM M610.4 (STD, Machinable):
+* NOTE  Tray Type:
+*       1FT TRAY
+*       2FT TRAY
+*       1&2FT TRAYS
+*       2FT EMM TRAY
+*       2FT EMM & 1FT TRAYS
+* NOTE  Overflow Trays Option:
+*       OVERFLOW, NONE, REDUCED
+
+
+BEGIN  Presort Scheme: 1C/STD, Regular Letters =================
+Unqualified Act (CONT/ABORT/ABORT ALL)= cont
+No Sorting After (5DG/3DG/ADC)....... = 
+STD Create 3DG Origin Mach Trays(Y/N) = y
+STD Create Mach AADC Trays (Y/N)..... = y
+STD Overflow Trays Option (See Note). = NONE
+Max Package Thickness (3 to 10 in.).. = 4
+Tray Type (see NOTE)................. = 1&2ft trays
+Min 1 Foot Tray Volume (50 to 95%)... = 85
+Max 1 Foot Tray Volume (50 to 100%).. = 100
+Min 2 Foot Tray Volume (50 to 95%)... = 85
+Max 2 Foot Tray Volume (50 to 100%).. = 100
+END
+
+* NOTE  Tray Type:
+*       1FT TRAY
+*       2FT TRAY
+*       1&2FT TRAYS
+*       2FT EMM TRAY
+*       2FT EMM & 1FT TRAYS
+* NOTE  Overflow Trays Option:
+*       OVERFLOW, NONE, REDUCED
+* DMM 135.1 Presort:
+
+BEGIN  Presort Scheme: 1C, Single Piece ========================
+Entry Point (LAST EP/ALL)............ = last ep
+Max to drop, ATM to REG (0 to 499)... = 0
+Combine 1&2 oz Residual Letters (Y/N) = n
+Letter Tray Type (See NOTE).......... = 1&2ft trays
+Max 1 Foot Tray Volume (50 to 100%).. = 100
+Max 2 Foot Tray Volume (50 to 100%).. = 100
+1C Number of Stacks in Tray(1.0 - 4.0)= 1
+1C Min Tray Height (in. to hand holds)= 8
+1C Max Tray Height (inches).......... = 11.25
+Include Unqualified Pieces (Y/N)..... = n
+END
+
+* NOTE for Printer Init and Reset:  Use these parameters to send control
+* signals to your printer to switch fonts, line spacing, condensed mode,
+* etc.  REFER TO YOUR PRINTER MANUAL for ASCII decimal codes.  Type a
+* backward slash and three-digit number (for example, \001).  Max length
+* is 20 codes; no spaces or commas between (for example, \001\002\003).
+
+
+BEGIN  Mailing Information =====================================
+Postage Payment Method (see NOTE).... = correct meter
+Stamps/Metered Neither Pstg (See Note)= 42
+PER Authorized as a Newspaper (Y/N).. = n
+PER Ctn/Bundle Charge Method(See Note)= APPORTION
+PER VerID to receive Ctn/Bundle Charge= 
+Mail Owner Name (to 35 chars)........ = 
+Mail Owner Address Line 1 (35 chars). = 
+Mail Owner Address Line 2 (35 chars). = 
+Mail Owner Address Line 3 (35 chars). = 
+Mail Owner DUNS No. (9 chars)........ = 
+Mail Owner Nonprof Auth No (10 chars) = 
+CRID of Mail Preparer (to 12 chars).. = 4041401
+Mailing Agent Name (to 35 chars)..... = 
+Mailing Agent Contact (to 35 chars).. = 
+Mailing Agent Address Line 1 (35 chrs)= 
+Mailing Agent Address Line 2 (35 chrs)= 
+Mailing Agent Address Line 3 (35 chrs)= 
+Mailing Agent Telephone No. (15 chars)= 
+Mailing Agent DUNS No. (9 chars)..... = 
+IDEA Mailing Fac. DUNS No.(15 chars). = 83-932-9158
+Statement Signer Name (to 35 chars).. = 
+Signer Telephone Number (to 15 chars) = 313-235-6835
+Receipt No. (to 15 chars)............ = 
+Mailing Date (to 15 chars)........... = $date
+Auto Matching/Coding Date (MMDDYYYY). = $date
+CART Matching/Coding Date (MMDDYYYY). = 
+CART Sequencing Date (MMDDYYYY)...... = 
+LOT Database Date (MMDDYYYY)......... = 
+Simplified Address Date (MMDDYYYY)... = 
+Move Update Date (MMDDYYYY).......... = 
+Move Update Method (See Note)........ = mult
+END
+
+*******************************************************************************************************
+**
+*		 Report: Job Summary
+**
+*******************************************************************************************************
+
+BEGIN  Report: Job Summary =====================================
+Location and File Name/Printer Device = D:\CCM\invoices\output\$job.pjs
+Existing File (APPEND/REPLACE)....... = replace
+Number of Copies (1 to 10)........... = 1
+Case (UPPER/Upper and Lower)......... = 
+Page Header Line 1 (to 80 chars)..... = 
+Page Header Line 2 (to 80 chars)..... = DTE Energy
+Page Header Line 3 (to 80 chars)..... = Job Summary
+Page Header Line 4 (to 80 chars)..... = 
+Printer Init, For Reports............ = 
+Printer Reset, For Reports........... = 
+Page Length (25 to 100 lines)........ = 44
+Page Width (132 to 250 chars)........ = 132
+Top Margin (0 to 20 lines)........... = 2
+Bottom Margin (0 to 20 lines)........ = 2
+Left Margin (0 to 20 chars).......... = 0
+Right Margin (0 to 20 chars)......... = 0
+Suppress Warnings (Y/N).............. = n
+Print Name Optimizer Information(Y/N) = n
+END
+
+*******************************************************************************************************
+**
+*		 Report: Mail Sort Listing 
+**
+*******************************************************************************************************
+
+BEGIN  Report: Mail Sort Listing ===============================
+Location and File Name/Printer Device = D:\CCM\invoices\output\$job.msl
+Existing File (APPEND/REPLACE)....... = replace
+Number of Copies (1 to 10)........... = 1
+Case (UPPER/Upper and Lower)......... = 
+Page Header Line 1 (to 80 chars)..... = 
+Page Header Line 2 (to 80 chars)..... = DTE Energy
+Page Header Line 3 (to 80 chars)..... = Mail Sort Listing
+Page Header Line 4 (to 80 chars)..... = 
+Printer Init, For Reports............ = 
+Printer Reset, For Reports........... = 
+Page Length (30 to 100 lines)........ = 44
+Page Width (80 to 250 chars)......... = 132
+Top Margin (0 to 20 lines)........... = 2
+Bottom Margin (0 to 20 lines)........ = 2
+Left Margin (0 to 20 chars).......... = 0
+Right Margin (0 to 20 chars)......... = 0
+Report Format (See Note)............. = ctn
+Package-based Sequence (EW/NS)....... = ew
+END
+
+*******************************************************************************************************
+**
+*		 Report: USPS Qualification Report
+**
+*******************************************************************************************************
+* NOTE: Mail Sort Listing Report Format entries:
+*       PLT              Pallet format
+*       CTN              Container format
+*       PKG              Package (Bundle) format
+*       EXT              Extended (Bundle Detail) format
+*       USPS Bundle      PER Bundle report required by USPS
+*       USPS Container   PER Container report required by USPS
+
+BEGIN  Report: USPS Qualification Report =======================
+Location and File Name/Printer Device = D:\CCM\invoices\output\$job.pqr
+Existing File (APPEND/REPLACE)....... = replace
+Number of Copies (1 to 10)........... = 1
+Case (UPPER/Upper and Lower)......... = 
+Page Header Line 1 (to 80 chars)..... = 
+Page Header Line 2 (to 80 chars)..... = DTE Energy
+Page Header Line 3 (to 80 chars)..... = USPS Qualification Report
+Page Header Line 4 (to 80 chars)..... = 
+Printer Init, For Reports............ = 
+Printer Reset, For Reports........... = 
+Page Length (30 to 100 lines)........ = 44
+Page Width (132 to 250 chars)........ = 132
+Top Margin (0 to 20 lines)........... = 2
+Bottom Margin (0 to 20 lines)........ = 2
+Left Margin (0 to 20 chars).......... = 0
+Right Margin (0 to 20 chars)......... = 0
+Detail Every Nth Container(1 to 1000) = 20
+END
+
+*******************************************************************************************************
+**
+*		 Report: Summary Listing
+**
+*******************************************************************************************************
+
+BEGIN  Report: Summary Listing =================================
+Location and File Name/Printer Device = D:\CCM\invoices\output\$job.psl
+Existing File (APPEND/REPLACE)....... = replace
+Number of Copies (1 to 10)........... = 1
+Case (UPPER/Upper and Lower)......... = 
+Page Header Line 1 (to 80 chars)..... = 
+Page Header Line 2 (to 80 chars)..... = DTE Energy
+Page Header Line 3 (to 80 chars)..... = Summary Listing
+Page Header Line 4 (to 80 chars)..... = 
+Printer Init, For Reports............ = 
+Printer Reset, For Reports........... = 
+Page Length (20 to 100 lines)........ = 44
+Page Width (132 to 250 chars)........ = 132
+Top Margin (0 to 20 lines)........... = 0
+Bottom Margin (0 to 20 lines)........ = 0
+Left Margin (0 to 20 chars).......... = 0
+Right Margin (0 to 20 chars)......... = 0
+Include Remaining Pieces (Y/N)....... = n
+Report Format (EP/SEG/VERSION/EP&VER) = EP
+END
+
+*******************************************************************************************************
+**
+*		 Report: USPS Postage Statement Form 3600 (1C) 
+**
+*******************************************************************************************************
+
+BEGIN  Report: USPS Postage Statement Form 3600 (1C) ===========
+Location and File Name/Printer Device = D:\CCM\invoices\output\$job.360
+Existing File (APPEND/REPLACE)....... = replace
+Number of Copies (1 to 10)........... = 1
+Case (UPPER/Upper and Lower)......... = 
+Form Header Line 1 (to 40 chars)..... = 
+Page Header Line 2 (to 80 chars)..... = DTE Energy
+Form Header Line 3 (to 40 chars)..... = USPS Postage Statement Form 3600 (1C)
+Printer Init, USPS Forms............. = 
+Printer Reset, USPS Forms............ = 
+Page Length (110 to 120 lines)....... = 112
+Page Width (132 to 250 chars)........ = 132
+Top Margin (0 to 20 lines)........... = 2
+Bottom Margin (0 to 20 lines)........ = 2
+Left Margin (0 to 20 chars).......... = 0
+Right Margin (0 to 20 chars)......... = 0
+Print Extended ASCII Characters (Y/N) = n
+Print Minimum Number of Pages (Y/N).. = n
+Print Multiple Second Pages (Y/N).... = y
+Print Sequence No. (Y/N)............. = y
+Print Total Postage (Y/N)............ = y
+Report Information (see NOTE)........ = mlg
+END
+
+* NOTE  Postage Statement Report Information Options:
+*   MLG         Summary Postage Statement for each qualified mailing
+*   SUM JOB     Summary Postage Statement for entire job
+*   SUM EP      Summary Postage Statement for each Entry Point
+*   SUM SEG     Summary Postage Statement for each Segment
+*   SUM EP&SEG  Summary Postage Statement for each Entry Point and
+*               Segment combination
+*   SUM PERMIT  Summary Postage Statement for each Permit number
+
+
+*******************************************************************************************************
+**
+*		 Report: USPS Manifest Listing (1C/STD_A/STD_B) 
+**
+*******************************************************************************************************
+
+BEGIN  Report: USPS Manifest Listing (1C/STD/PSVC) =============
+Location and File Name/Printer Device = D:\CCM\invoices\output\$job.qml
+Existing File (APPEND/REPLACE)....... = replace
+Number of Copies (1 to 10)........... = 1
+Case (UPPER/Upper and Lower)......... = 
+Page Header Line 1 (to 80 chars)..... = 
+Page Header Line 2 (to 80 chars)..... = DTE Energy
+Page Header Line 3 (to 80 chars)..... = USPS Manifest Listing (1C/STD_A/STD_B)
+Page Header Line 4 (to 80 chars)..... = 
+Printer Init, For Reports............ = 
+Printer Reset, For Reports........... = 
+Page Length (30 to 100 lines)........ = 63
+Page Width (132 to 250 chars)........ = 132
+Top Margin (0 to 20 lines)........... = 4
+Bottom Margin (0 to 20 lines)........ = 4
+Left Margin (0 to 20 chars).......... = 0
+Right Margin (0 to 20 chars)......... = 0
+Manifest Batch Size.................. = 100
+Manifest Preparation Date (15 chars). = 
+Report Information (DETAIL/SUM/BOTH). = both
+PSVC Summary Type (EP/EP&VER)........ = EP&VER
+END
+
+*******************************************************************************************************
+**
+*		 Report: ZIP Code Listing
+**
+*******************************************************************************************************
+
+BEGIN  Report: ZIP Code Listing ================================
+Location and File Name/Printer Device = D:\CCM\invoices\output\$job.zcl
+Existing File (APPEND/REPLACE)....... = replace
+Number of Copies (1 to 10)........... = 1
+Case (UPPER/Upper and Lower)......... = 
+Page Header Line 1 (to 80 chars)..... = 
+Page Header Line 2 (to 80 chars)..... = DTE Energy
+Page Header Line 3 (to 80 chars)..... = ZIP Code Listing
+Page Header Line 4 (to 80 chars)..... = 
+Printer Init, For Reports............ = 
+Printer Reset, For Reports........... = 
+Page Length (20 to 100 lines)........ = 44
+Page Width (110 to 250 chars)........ = 132
+Top Margin (0 to 20 lines)........... = 6
+Bottom Margin (0 to 20 lines)........ = 6
+Left Margin (0 to 20 chars).......... = 10
+Right Margin (0 to 20 chars)......... = 10
+Report Information (MLG/SUM/BOTH).... = both
+Report Format (5DG-CAR/5DG/3DG/USPS). = 5dg-car
+END
+
+*******************************************************************************************************
+**
+*           Report Mail.dat
+**
+*********************************************************************************************************
+BEGIN  Report: IDEA Mail.dat ===================================
+Mail.dat version (14-2/15-1)......... = 15-1
+Output File(<path & base file name>.*)= D:\CCM\invoices\output\%MFILENAME%.*
+Participate in PostalOne! Prog (Y/N). = y
+Create IDEA Seed File (Y/N).......... = n
+Create IDEA PDR File (Y/N)........... = y
+Create IDEA PBC File (Y/N)........... = y
+Create IDEA EPD File (Y/N)........... = n
+Create IDEA UPA File (Y/N)........... = n
+Create IDEA CCR File (Y/N)........... = n
++ Create Files Per Entry Point (Y/N). = n
++ Create Files Per Segment (Y/N)..... = n
++ Create Files Per Presort Scheme(Y/N)= n
+IDEA Provider Code (to 4 chars)...... = DECO
+Production Job ID (to 8 chars)....... = %MFILENAME%
+Job Name/Title & Issue (to 30 chars). = FULL SERVICE OPTION
+Licensed User's Job Num (to 25 chars) = FULL SERVICE
+File Source (to 30 chars)............ = DTE Energy
+Contact Name (to 30 chars)........... = Paul Panoff
+Contact Telephone (to 10 chars)...... = 3132356707
+Contact Email (to 60 chars).......... = panoffp@dteenergy.com
+Date Prepared (YYYYMMDD)............. = $date
+Time Prepared (to 5 chars, Military). = $TIME
+Addl. Postage Pymt Method (See Note). = PERMIT
+Addl. Permit No. (to 15 chars) ...... = 95023
+Addl. Permit Holder City (to 13 chars)= Detroit
+Addl. Permit Holder State (to 2 chars)= MI
+Addl. Permit Holder ZIP+4 (to 9 chars)= 482261279
+Mail Piece Unit ID (See Note)........ = ver no
+Mail Piece Unit Name (See Note)...... = ver no
+Mail Piece Unit Description(See Note) = ver name
+Segment File Creation Option(See Note)= job
+Header Rec eDoc Sender CRID (12 chars)= 4041401
+Header Rec Info Exchange (to 20 chars)= 
+Header Rec User Option (to 512 chars) = 
+COMAIL Class Def Prep in SEG(2/3/6).. = 3
+Segment Rec User Option (to 20 chars) = 
+Ctn Grouping Description (See Note).. = 
+IMb/IMpb Preparer By/For Option(Note) = MID
+Mail Owners Lcl Permit Ref Number.... = 
+Mail Owners Lcl Permit Ref Type (Note)= 
+Container Status Ready To Pay (Y/N).. = n
+Job is an eInduction Mailing (Y/N)... = n
+USPS to Accept Misshipped Ctns (Y/N). = n
+PER CSA Applies(Y/N)................. = n
+Force 5DG Breakout in CQT and PQT(Y/N)= n
+Destination Entry Known (Y/N)........ = y
+Add CR/LF to each record (Y/N)....... = y
+END
+
+* NOTE:   Mail Piece Unit ID/Name Entries:
+*         VER NO        - Use Value of AP field VER_NO
+*         VER ID        - Use Value of Postware field VERSION_ID
+*         VER NAME      - Use Version Name
+
+* NOTE:   Mail Piece Unit Description Entries:
+*         VER ID   - Use Value of Postware field VER_ID
+*         VER NAME - Use Version Name
+
+* NOTE:   Segment File Creation Options:
+*         JOB
+*         MLG
+*         EP
+*         SEG
+*         SEG ID
+*         SEG NAME
+*         EP&SEG
+
+* NOTE:   Container Grouping Description Entries
+*         Field may be left blank or may be one of the following:
+*         EP NAME
+*         EP ID
+*         SEG NAME
+*         SEG ID
+*         VER NAME
+*         VER ID
+
+
+*******************************************************************************************************
+* Address Output File Def
+* CAB-MAIL-SORT-KEYLINE-2A
+* %WORK_PATH%$job.ads
+* DTE Energy Presort Job File 
+* presort.pst
+* Called By BFSCSB Split Program bfscq003
+* 2/16/1999
+******************************************************************************************************
+* NOTE:   IMb/IMpb Preparer By/For Option entries:
+*         MID  - Mailer ID
+*         CRID - Customer Registration ID
+*         BOTH - Mailer ID and Customer Registration ID
+* NOTE:   Mail Owners Lcl Permit Ref Type entries:
+*         STAMP
+*         METER
+*         PERMIT
+*         GOVT FED USE PERMIT
+*         VIRTUAL
+*         GOVT METER
+* NOTE:   The Additional Postage Payment Method parameter is used in the Mail.dat MPA record.
+*         For jobs using affixed postage, you must use one of the following options:
+*         PERMIT
+*         GOVT FED USE PERMIT
+
+BEGIN  Create File for Output ==================================
+File Name (path & file name)......... = D:\CCM\invoices\work\$job.ads
+File Type (see NOTE below)........... = DELIMITED
+Create DEF file (Y/N)................ = n
+Rec Format to Clone (path & file name)= D:\CCM\invoices\work\presort_in.csv
+Field (name,length,type[,misc])...... = AdScan,150,C
+Field (name,length,type[,misc])...... = OptEndrs,35,C
+Field (name,length,type[,misc])...... = Imb_Adr,65,c
+Field (name,length,type[,misc])...... = Add_Ctn_No_Rel,150,C
+Field (name,length,type[,misc])...... = Add_Plt_No_Rel,150,C
+Field (name,length,type[,misc])...... = Add_Pc_No_Rel,150,C
+Field (name,length,type[,misc])...... = Add_Ctn_Size,150,C
+END
+
+* Copy (source,destination)...... = AP.Plt_No_Rel,Add_Plt_No_Rel
+* Copy (source,destination)...... = AP.Ctn_No_Rel,Add_Ctn_No_Rel
+* Copy (source,destination)...... = AP.Pkg_No_Rel,Add_Pkg_No_Rel
+* Copy (source,destination)...... = AP.Pc_No_Rel,Add_Pc_No_Rel
+* Copy (source,destination)...... = AP.Imb_Adr_Ec,Imb_Adr_Ec
+* Copy (source,destination)...... = AP.Imb_Adr_Ac,Imb_Adr_Ac
+* Copy (source,destination)...... = AP.Mailing_ID,Mailing_ID
+* Copy (source,destination)...... = AP.Ctn_Size,Add_Ctn_Size
+
+*******************************************************************************
+* Container Output File Def For TRAYS
+* %OUTPUT_PATH%bfsiq004.try
+* DTE Energy Presort Job File 
+* presort.pst
+* Called By BFSCSB Split Program bfscq003
+* 2/16/1999
+******************************************************************************************************
+
+BEGIN  Create File for Output ==================================
+File Name (path & file name)......... = D:\CCM\invoices\output\bfsiq004.try
+File Type (see NOTE below)........... = DELIMITED
+Create DEF file (Y/N)................ = n
+Rec Format to Clone (path & file name)= 
+Field (name,length,type[,misc])...... = class,1,c
+Field (name,length,type[,misc])...... = cont_line,34,c
+Field (name,length,type[,misc])...... = contents,3,c
+Field (name,length,type[,misc])...... = cpl_ver_no,5,c
+Field (name,length,type[,misc])...... = ctn_barcd,10,c
+Field (name,length,type[,misc])...... = ctn_bc_req,1,c
+Field (name,length,type[,misc])...... = ctn_fill,1,c
+Field (name,length,type[,misc])...... = ctn_level,4,c
+Field (name,length,type[,misc])...... = ctn_no_abs,6,c
+Field (name,length,type[,misc])...... = ctn_no_mlg,6,c
+Field (name,length,type[,misc])...... = ctn_no_plt,6,c
+Field (name,length,type[,misc])...... = ctn_no_rel,6,c
+Field (name,length,type[,misc])...... = ctn_rate,3,c
+Field (name,length,type[,misc])...... = ctn_size,1,c
+Field (name,length,type[,misc])...... = ctn_type,1,c
+Field (name,length,type[,misc])...... = ctn_vol,7,c
+Field (name,length,type[,misc])...... = ctn_wt,9,c
+Field (name,length,type[,misc])...... = dest_cs,30,c
+Field (name,length,type[,misc])...... = dest_zip,5,c
+Field (name,length,type[,misc])...... = dest_line,34,c
+Field (name,length,type[,misc])...... = dest_rate,4,c
+Field (name,length,type[,misc])...... = ent_pt_csz,35,c
+Field (name,length,type[,misc])...... = ent_pt_nam,31,c
+Field (name,length,type[,misc])...... = ent_pt_no,3,c
+Field (name,length,type[,misc])...... = no_pcs,5,c
+Field (name,length,type[,misc])...... = no_pkgs,4,c
+Field (name,length,type[,misc])...... = orig_line,34,c
+Field (name,length,type[,misc])...... = pallet,1,c
+Field (name,length,type[,misc])...... = plt_brk_f,1,c
+Field (name,length,type[,misc])...... = plt_brk_fl,1,c
+Field (name,length,type[,misc])...... = plt_brk_l,1,c
+Field (name,length,type[,misc])...... = plt_level,4,c
+Field (name,length,type[,misc])...... = plt_no_abs,6,c
+Field (name,length,type[,misc])...... = plt_no_mlg,6,c
+Field (name,length,type[,misc])...... = plt_no_rel,6,c
+Field (name,length,type[,misc])...... = postage,14,c
+Field (name,length,type[,misc])...... = scheme_no,2,c
+Field (name,length,type[,misc])...... = seg_name,31,c
+Field (name,length,type[,misc])...... = seg_no,4,c
+Field (name,length,type[,misc])...... = tray_prep,1,c
+Field (name,length,type[,misc])...... = zebra_req,1,c
+Field (name,length,type[,misc])...... = imb_trysck,24,c
+Field (name,length,type[,misc])...... = imb_rtauto,4,c
+END
+
+*******************************************************************************************************
+* Pallets Output File Def 
+* %OUTPUT_PATH%zip_pallet.plt
+* DTE Energy Presort Job File 
+* presort.pst
+* Called By BFSCSB Split Program bfscq003
+* 2/16/1999
+******************************************************************************************************
+BEGIN  Create File for Output ==================================
+File Name (path & file name)......... = D:\CCM\invoices\output\zip_pallet.plt
+File Type (see NOTE below)........... = DELIMITED
+Create DEF file (Y/N)................ = n
+Rec Format to Clone (path & file name)= 
+Field (name,length,type[,misc])...... = class,1,c
+Field (name,length,type[,misc])...... = cont_line,34,c
+Field (name,length,type[,misc])...... = cpl_ver_no,5,c
+Field (name,length,type[,misc])...... = dest_cs,30,c
+Field (name,length,type[,misc])...... = dest_zip,5,c
+Field (name,length,type[,misc])...... = dest_line,34,c
+Field (name,length,type[,misc])...... = dest_rate,4,c
+Field (name,length,type[,misc])...... = ent_pt_csz,35,c
+Field (name,length,type[,misc])...... = ent_pt_nam,31,c
+Field (name,length,type[,misc])...... = ent_pt_no,3,c
+Field (name,length,type[,misc])...... = no_pcs,5,c
+Field (name,length,type[,misc])...... = no_pkgs,4,c
+Field (name,length,type[,misc])...... = no_pkg_plt,5,c
+Field (name,length,type[,misc])...... = no_ctn_plt,3,c
+Field (name,length,type[,misc])...... = orig_line,34,c
+Field (name,length,type[,misc])...... = plt_level,4,c
+Field (name,length,type[,misc])...... = plt_no_abs,6,c
+Field (name,length,type[,misc])...... = plt_no_mlg,6,c
+Field (name,length,type[,misc])...... = plt_no_rel,6,c
+Field (name,length,type[,misc])...... = plt_vol,7,c
+Field (name,length,type[,misc])...... = plt_wt,9,c
+Field (name,length,type[,misc])...... = postage,14,c
+Field (name,length,type[,misc])...... = scheme_no,2,c
+Field (name,length,type[,misc])...... = seg_name,31,c
+Field (name,length,type[,misc])...... = seg_no,4,c
+Field (name,length,type[,misc])...... = zip_range,11,c
+Field (name,length,type[,misc])...... = imb_plt,21,c
+END
+
+*******************************************************************************************************
+* Container/Sack Output File Def For 
+* %OUTPUT_PATH%zip_packg.pck
+* DTE Energy Presort Job File 
+* presort.pst
+* Called By BFSCSB Split Program bfscq003
+* 2/16/1999
+******************************************************************************************************
+
+BEGIN  Create File for Output ==================================
+File Name (path & file name)......... = D:\CCM\invoices\output\zip_packg.pck
+File Type (see NOTE below)........... = DELIMITED
+Create DEF file (Y/N)................ = n
+Rec Format to Clone (path & file name)= 
+Field (name,length,type[,misc])...... = class,1,c
+Field (name,length,type[,misc])...... = ctn_level,4,c
+Field (name,length,type[,misc])...... = dest_zip,5,c
+Field (name,length,type[,misc])...... = ctn_rate,3,c
+END
+
+* Field (name,length,type[,misc])...... = Add_Plt_No_Rel,150,C
+* Field (name,length,type[,misc])...... = Add_Ctn_No_Rel,150,C
+* Field (name,length,type[,misc])...... = Add_Pkg_No_Rel,150,C
+* Field (name,length,type[,misc])...... = Add_Pc_No_Rel,150,C
+* Field (name,length,type[,misc])...... = Imb_Adr_Ec,65,c
+* Field (name,length,type[,misc])...... = Imb_Adr_Ac,65,c
+* Field (name,length,type[,misc])...... = Mailing_ID,65,c
+* Field (name,length,type[,misc])...... = Add_Ctn_Size,150,C
+
+********************************************************************************
+* WRITE TO ADDRESS OUTPUT FILE 
+* WRITES SCAN LINE AS LAST RECORD FIELD TO FILE
+* CAB-MAIL-SORT-KEYLINE-2A
+* %WORK_PATH%$job.ads
+* DTE Energy Presort Job File 
+* presort.pst
+* Called By BFSCSB Split Program bfscq003
+* 2/16/1999
+******************************************************************************************************
+
+BEGIN  Address Output File =====================================
+Output File (location & file name)... = D:\CCM\invoices\work\$job.ads
+Existing File (APPEND/REPLACE)....... = REPLACE
++ Create Files Per Entry Point (Y/N). = N
++ Create Files Per Segment (Y/N)..... = N
++ Create Files Per Presort Scheme(Y/N)= N
++ Create Files Per Bindery/Ver (Y/N). = N
+Create Files Per Piece Type (see NOTE)= N
+Create Files On Number of Records(Y/N)= N
+Max Number of Records Per File....... = 
++ Concatenate Files (Y/N)............ = N
++ PER Firm Pkg Printing (see NOTE)... = piece
+Copy Input Data to Output File (Y/N). = Y
+Copy (source,destination)............ = alltrim(str(month(date())))+alltrim(str(day(date())))+alltrim(str(year(date())))+space(1)+alltrim(AP.plt_no_abs)+space(1)+alltrim(AP.Ctn_No_Abs)+space(1)+alltrim(ap.ver_wt)+space(1)+alltrim(ap.ctn_type)+space(1)+alltrim(ap.postage)+space(1)+alltrim(AP.Piece_Rate), ADSCAN
+Copy (source,destination)............ = AP.Opt_Endrs, OPTENDRS
+Copy (source,destination)............ = AP.Imb_Adr, IMB_ADR
+Copy (source,destination)............ = AP.Ctn_No_Rel, ADD_CTN_NO_REL
+Copy (source,destination)............ = AP.Plt_No_Rel, ADD_PLT_NO_REL
+Copy (source,destination)............ = AP.Pc_No_Rel, ADD_PC_NO_REL
+Copy (source,destination)............ = AP.Ctn_Size, ADD_CTN_SIZE
+END
+
+* Field (name,length,type[,misc])...... = cont_line,34,c
+* Field (name,length,type[,misc])...... = contents,3,c
+* Field (name,length,type[,misc])...... = cpl_ver_no,5,c
+* Field (name,length,type[,misc])...... = ctn_barcd,8,c
+* Field (name,length,type[,misc])...... = ctn_bc_req,1,c
+* Field (name,length,type[,misc])...... = ctn_fill,1,c
+
+
+* Field (name,length,type[,misc])...... = ctn_level,4,c
+* Field (name,length,type[,misc])...... = ctn_no_abs,6,c
+* Field (name,length,type[,misc])...... = ctn_no_mlg,6,c
+* Field (name,length,type[,misc])...... = ctn_no_plt,6,c
+* Field (name,length,type[,misc])...... = ctn_no_rel,6,c
+* Field (name,length,type[,misc])...... = ctn_rate,3,c
+* Field (name,length,type[,misc])...... = ctn_size,1,c
+* Field (name,length,type[,misc])...... = ctn_type,1,c
+* Field (name,length,type[,misc])...... = ctn_vol,7,c
+* Field (name,length,type[,misc])...... = ctn_wt,9,c
+* Field (name,length,type[,misc])...... = dest_cs,30,c
+* Field (name,length,type[,misc])...... = dest_zip,5,c
+* Field (name,length,type[,misc])...... = dest_line,34,c
+* Field (name,length,type[,misc])...... = dest_rate,4,c
+* Field (name,length,type[,misc])...... = ent_pt_csz,35,c
+* Field (name,length,type[,misc])...... = ent_pt_nam,31,c
+* Field (name,length,type[,misc])...... = ent_pt_no,3,c
+* Field (name,length,type[,misc])...... = no_pcs,5,c
+* Field (name,length,type[,misc])...... = no_pkgs,4,c
+* Field (name,length,type[,misc])...... = orig_line,34,c
+* Field (name,length,type[,misc])...... = pallet,1,c
+* Field (name,length,type[,misc])...... = postage,14,c
+* Field (name,length,type[,misc])...... = scheme_no,2,c
+* Field (name,length,type[,misc])...... = seg_name,31,c
+* Field (name,length,type[,misc])...... = seg_no,4,c
+
+
+*******************************************************************************************************
+* WRITE TO CONTAINER/SACK OUTPUT FILE 
+* %OUTPUT_PATH%zip_packg.pck
+* DTE Energy Presort Job File 
+* presort.pst
+* Called By BFSCSB Split Program bfscq003
+* 2/16/1999
+******************************************************************************************************
+
+BEGIN  Package Output File =====================================
+Output File (location & file name)... = D:\CCM\invoices\output\zip_packg.pck
+Existing File (APPEND/REPLACE)....... = replace
++ Create Files Per Entry Point (Y/N). = n
++ Create Files Per Segment (Y/N)..... = n
++ Create Files Per Presort Scheme(Y/N)= n
++ Concatenate Files (Y/N)............ = n
+Copy (source,destination)............ = ap.class, class
+Copy (source,destination)............ = ap.ctn_level, ctn_level
+Copy (source,destination)............ = ap.dest_zip, dest_zip
+Copy (source,destination)............ = ap.ctn_rate, ctn_rate
+END
+
+*******************************************************************************************************
+* WRITE TO TRAY OUTPUT FILE 
+* %OUTPUT_PATH%bfsiq004.try
+* DTE Energy Presort Job File 
+* presort.pst
+* Called By BFSCSB Split Program bfscq003
+* 2/16/1999
+******************************************************************************************************
+
+BEGIN  Container Output File ===================================
+Output File (location & file name)... = D:\CCM\invoices\output\bfsiq004.try
+Existing File (APPEND/REPLACE)....... = replace
++ Create Files Per Entry Point (Y/N). = n
++ Create Files Per Segment (Y/N)..... = n
++ Create Files Per Presort Scheme(Y/N)= n
++ Concatenate Files (Y/N)............ = n
+Copy (source,destination)............ = ap.class, class
+Copy (source,destination)............ = ap.cont_line, cont_line
+Copy (source,destination)............ = ap.contents, contents
+Copy (source,destination)............ = ap.cpl_ver_no, cpl_ver_no
+Copy (source,destination)............ = ap.ctn_barcd, ctn_barcd
+Copy (source,destination)............ = ap.ctn_bc_req, ctn_bc_req
+Copy (source,destination)............ = ap.ctn_fill, ctn_fill
+Copy (source,destination)............ = ap.ctn_level, ctn_level
+Copy (source,destination)............ = ap.ctn_no_abs, ctn_no_abs
+Copy (source,destination)............ = ap.ctn_no_mlg, ctn_no_mlg
+Copy (source,destination)............ = ap.ctn_no_plt, ctn_no_plt
+Copy (source,destination)............ = ap.ctn_no_rel, ctn_no_rel
+Copy (source,destination)............ = ap.ctn_rate, ctn_rate
+Copy (source,destination)............ = ap.ctn_size, ctn_size
+Copy (source,destination)............ = ap.ctn_type, ctn_type
+Copy (source,destination)............ = ap.ctn_vol, ctn_vol
+Copy (source,destination)............ = ap.ctn_wt, ctn_wt
+Copy (source,destination)............ = ap.dest_cs, dest_cs
+Copy (source,destination)............ = ap.dest_zip, dest_zip
+Copy (source,destination)............ = ap.dest_line, dest_line
+Copy (source,destination)............ = ap.dest_rate, dest_rate
+Copy (source,destination)............ = ap.ent_pt_csz, ent_pt_csz
+Copy (source,destination)............ = ap.ent_pt_nam, ent_pt_nam
+Copy (source,destination)............ = ap.ent_pt_no, ent_pt_no
+Copy (source,destination)............ = ap.no_pcs, no_pcs
+Copy (source,destination)............ = ap.no_pkgs, no_pkgs
+Copy (source,destination)............ = ap.orig_line, orig_line
+Copy (source,destination)............ = ap.pallet, pallet
+Copy (source,destination)............ = ap.plt_brk_f, plt_brk_f
+Copy (source,destination)............ = ap.plt_brk_fl, plt_brk_fl
+Copy (source,destination)............ = ap.plt_brk_l, plt_brk_l
+Copy (source,destination)............ = ap.plt_level, plt_level
+Copy (source,destination)............ = ap.plt_no_abs, plt_no_abs
+Copy (source,destination)............ = ap.plt_no_mlg, plt_no_mlg
+Copy (source,destination)............ = ap.plt_no_rel, plt_no_rel
+Copy (source,destination)............ = ap.postage, postage
+Copy (source,destination)............ = ap.scheme_no, scheme_no
+Copy (source,destination)............ = ap.seg_name, seg_name
+Copy (source,destination)............ = ap.seg_no, seg_no
+Copy (source,destination)............ = ap.tray_prep, tray_prep
+Copy (source,destination)............ = ap.zebra_req, zebra_req
+Copy (source,destination)............ = ap.imb_trysck, imb_trysck
+Copy (source,destination)............ = ap.imb_rtauto, imb_rtauto
+END
+
+
+*******************************************************************************************************
+* WRITE TO PALLET OUTPUT FILE 
+* %OUTPUT_PATH%zip_pallet.plt
+* DTE Energy Presort Job File 
+* presort.pst
+* Called By BFSCSB Split Program bfscq003
+* 2/16/1999
+******************************************************************************************************
+
+BEGIN  Pallet Output File ======================================
+Output File (location & file name)... = D:\CCM\invoices\output\zip_pallet.plt
+Existing File (APPEND/REPLACE)....... = replace
++ Create Files Per Entry Point (Y/N). = n
++ Create Files Per Segment (Y/N)..... = n
++ Create Files Per Presort Scheme(Y/N)= n
++ Concatenate Files (Y/N)............ = n
+Copy (source,destination)............ = ap.class, class
+Copy (source,destination)............ = ap.cont_line, cont_line
+Copy (source,destination)............ = ap.cpl_ver_no, cpl_ver_no
+Copy (source,destination)............ = ap.dest_cs, dest_cs
+Copy (source,destination)............ = ap.dest_zip, dest_zip
+Copy (source,destination)............ = ap.dest_line, dest_line
+Copy (source,destination)............ = ap.dest_rate, dest_rate
+Copy (source,destination)............ = ap.ent_pt_csz, ent_pt_csz
+Copy (source,destination)............ = ap.ent_pt_nam, ent_pt_nam
+Copy (source,destination)............ = ap.ent_pt_no, ent_pt_no
+Copy (source,destination)............ = ap.no_pcs, no_pcs
+Copy (source,destination)............ = ap.no_pkgs, no_pkgs
+Copy (source,destination)............ = ap.no_pkg_plt, no_pkg_plt
+Copy (source,destination)............ = ap.no_ctn_plt, no_ctn_plt
+Copy (source,destination)............ = ap.orig_line, orig_line
+Copy (source,destination)............ = ap.plt_level, plt_level
+Copy (source,destination)............ = ap.plt_no_abs, plt_no_abs
+Copy (source,destination)............ = ap.plt_no_mlg, plt_no_mlg
+Copy (source,destination)............ = ap.plt_no_rel, plt_no_rel
+Copy (source,destination)............ = ap.plt_vol, plt_vol
+Copy (source,destination)............ = ap.plt_wt, plt_wt
+Copy (source,destination)............ = ap.postage, postage
+Copy (source,destination)............ = ap.scheme_no, scheme_no
+Copy (source,destination)............ = ap.seg_name, seg_name
+Copy (source,destination)............ = ap.seg_no, seg_no
+Copy (source,destination)............ = ap.zip_range, zip_range
+Copy (source,destination)............ = ap.imb_plt, imb_plt
+END
+
+
+* Copy (source,destination)............ = ap.cont_line, cont_line
+* Copy (source,destination)............ = ap.contents, contents
+* Copy (source,destination)............ = ap.cpl_ver_no, cpl_ver_no
+* Copy (source,destination)............ = ap.ctn_barcd, ctn_barcd
+* Copy (source,destination)............ = ap.ctn_bc_req, ctn_bc_req
+* Copy (source,destination)............ = ap.ctn_fill, ctn_fill
+
+
+* Copy (source,destination)............ = ap.ctn_level, ctn_level
+* Copy (source,destination)............ = ap.ctn_no_abs, ctn_no_abs
+* Copy (source,destination)............ = ap.ctn_no_mlg, ctn_no_mlg
+* Copy (source,destination)............ = ap.ctn_no_plt, ctn_no_plt
+* Copy (source,destination)............ = ap.ctn_no_rel, ctn_no_rel
+* Copy (source,destination)............ = ap.ctn_rate, ctn_rate
+* Copy (source,destination)............ = ap.ctn_size, ctn_size
+* Copy (source,destination)............ = ap.ctn_type, ctn_type
+* Copy (source,destination)............ = ap.ctn_vol, ctn_vol
+* Copy (source,destination)............ = ap.ctn_wt, ctn_wt
+* Copy (source,destination)............ = ap.dest_cs, dest_cs
+* Copy (source,destination)............ = ap.dest_zip, dest_zip
+* Copy (source,destination)............ = ap.dest_line, dest_line
+* Copy (source,destination)............ = ap.dest_rate, dest_rate
+* Copy (source,destination)............ = ap.ent_pt_csz, ent_pt_csz
+* Copy (source,destination)............ = ap.ent_pt_nam, ent_pt_nam
+* Copy (source,destination)............ = ap.ent_pt_no, ent_pt_no
+* Copy (source,destination)............ = ap.no_pcs, no_pcs
+* Copy (source,destination)............ = ap.no_pkgs, no_pkgs
+* Copy (source,destination)............ = ap.orig_line, orig_line
+* Copy (source,destination)............ = ap.pallet, pallet
+* Copy (source,destination)............ = ap.postage, postage
+* Copy (source,destination)............ = ap.scheme_no, scheme_no
+* Copy (source,destination)............ = ap.seg_name, seg_name
+* Copy (source,destination)............ = ap.seg_no, seg_no
+
+
+
+BEGIN  General Output ==========================================
+Pallet No. (ABS/REL MLG/REL SEG)..... = abs
+Starting Pallet No................... = 1
+Container No. (See NOTE)............. = abs
+Starting Container No................ = 1
+Pkg No. (See NOTE)................... = abs
+Starting Package No.................. = 1
+Label No. (See NOTE)................. = abs
++ Mfst Serial Numbering (See NOTE)... = abs
+Mailing Sequence No. Prefix (9 chars) = 
+Mailing Sequence No. Start (4 digits) = 1
+END
+
+* NOTE   Label Numbering entries:
+*        ABS     -- Absolute
+*        REL MLG -- Relative to Mailing
+*        REL SEG -- Relative to Segment
+*        REL PLT -- Relative to Pallet
+*        REL CTN -- Relative to Container
+*        REL PKG -- Relative to Package
+* NOTE:  Manifest Serial Numbering entries:
+*        ABS     -- Absolute
+*        REL MLG -- Relative to Mailing
+*        REL SEG -- Relative to Segment
+
+BEGIN  Output Order ============================================
+Reports (1-5)........................ = 1
+Address Output File(1-5)............. = 2
+Package Output File(1-5)............. = 3
+Container Output File(1-5)........... = 4
+Pallet Output File (1-5)............. = 5
+END
+
+* NOTE: Letter Tray Type Options
+*          1FT TRAY, 2FT TRAY, 1&2FT TRAYS, 2FT EMM TRAY
+
+BEGIN  Report Defaults =========================================
+Location and File Name/Printer Device = 
+Existing File (APPEND/REPLACE)....... = replace
+Number of Copies (1 to 10)........... = 1
+Case (UPPER/Upper and Lower)......... = upper and lower
+Page Header Line 1 (to 80 chars)..... = $date  $time
+Page Header Line 2 (to 80 chars)..... = DTE Energy
+Page Header Line 3 (to 80 chars)..... = CSB Project
+Page Header Line 4 (to 80 chars)..... = 
+Printer Init, USPS Forms (see note).. = 
+Printer Reset, USPS forms (see note). = 
+Printer Init, For Reports (see note). = 
+Printer Reset, For Reports (see note) = 
+Page Length ......................... = 44
+Page Width .......................... = 132
+Top Margin (0 to 20 lines)........... = 2
+Bottom Margin (0 to 20 lines)........ = 2
+Left Margin (0 to 20 chars).......... = 5
+Right Margin (0 to 20 chars)......... = 5
+Banner Page (JOB START/RPT ORDER/NONE)= none
+Report Order (BY RPT TYPE/BY MAILING) = by rpt type
+Suppress Product Name (Y/N).......... = n
+END
+
+* NOTE  Stamps Postage entries:
+*       Minimum allowable value for Stamps = 1.0
+*       Example: enter twenty nine cents as 29 (NOT 0.29)
+* NOTE  Postage Payment Method entries:
+*    
+*       If you use LOWEST METER JOB/MLG, MULTI METER, METERED NEITHER, or PRECANCELED STAMPS,
+*       produce a Postage Listing (for Periodicals, STD_A nonprofit) or the Postage 
+*       Statement (for First Class, STD_A profit, and STD_B).  
+*       Presort prints the additional postage you need to pay.
+
+* NOTE  PER Subscriber Option entries:
+
+*******************************************************************************************************
+**
+*		Edison Presort Reports:
+**
+*		(InActive) On-Demand Reporting
+*		(Active) Job Summary
+*		(Active) Mail Sort Listing
+*		(Active) USPS Qualification Report
+*		(Active) Summary Listing
+*		(Active) USPS Postage Statement Form 3600 (1C)
+*		(Active) USPS Manifest Listing (1C/STD_A/STD_B)
+*		(Active) ZIP Code Listing
+**
+*******************************************************************************************************
+* NOTE: PER Ctn/Bundle Charge Method entries:
+*       APPORTION          Allocate each container and bundle charge to versions
+*                          in the container or bundle, based on copies
+*       ASSIGN TO VERSION  Report all container and bundle charges on the 3541
+*                          of one of the versions.
+*                          When this option is used, you must also fill out the
+*                          PER VerID to receive Ctn/Bundle Charge parameter
+* NOTE: Move Update Method entries
+*       Field may be left blank or may be one of the following:
+*       ANCILLARY        Ancillary service endorsement
+*       NCOALINK         NCOALink
+*       ACS              ACS
+*       ALT              Alternative method
+*       MULT             Multiple
+*       SOE_ADD          Simplified/Occupant/Exceptional Address
+*       ONECODE_ACS      OneCode ACS
+
+BEGIN  On-Demand Reporting =====================================
+Report Break Level (PLT/CTN/PKG/PIECE)= 
+Print Ranges (START-END...).......... = 
+END

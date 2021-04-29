@@ -1,0 +1,1 @@
+"D:\Program Files (x86)\SAP BusinessObjects\Data Services/bin/AL_RWJobLauncher.exe "  "C:\ProgramData\SAP BusinessObjects\Data Services/log/JS06_DDI_10156/" -w "inet:DCA-DEV1121:10156"  -C "d:/ccm/invoices/bin/NCOA_batch_AV.txt"

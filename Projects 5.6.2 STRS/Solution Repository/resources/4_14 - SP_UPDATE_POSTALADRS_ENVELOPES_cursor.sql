@@ -1,0 +1,72 @@
+
+
+DROP PROCEDURE SP_UPDATE_POSTALADRS_ENVELOPES
+GO
+
+-- ================================================
+-- Template generated from Template Explorer using:
+-- Create Procedure (New Menu).SQL
+--
+-- Use the Specify Values for Template Parameters 
+-- command (Ctrl-Shift-M) to fill in the parameter 
+-- values below.
+--
+-- This block of comments will not be included in
+-- the definition of the procedure.
+-- ================================================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Don Orazulume
+-- Modifed date: 2016 07 13
+-- Description:	Update PostalAdrs table with envelope ids
+-- =============================================
+CREATE PROCEDURE SP_UPDATE_POSTALADRS_ENVELOPES
+AS
+BEGIN
+
+	DECLARE @DPCOUNTRY VARCHAR(20) 
+	DECLARE @DPSTATE VARCHAR(5)
+	DECLARE @DPCITY VARCHAR(40)
+	DECLARE @DPZIPEXT VARCHAR(10)
+	DECLARE @DPZIP VARCHAR(5)
+	DECLARE @DPADDRLINE3 VARCHAR(40)
+	DECLARE @DPADDRLINE2 VARCHAR(40)
+	DECLARE @DPADDRLINE1 VARCHAR(40)
+	DECLARE @DPCUSTOMERNAME VARCHAR(40)
+
+	DECLARE @STRSENVELOPEID VARCHAR(50)
+	DECLARE @row_num INT
+
+	DECLARE cursor_name CURSOR FOR (
+		SELECT UPPER(DPCOUNTRY), UPPER(DPSTATE), UPPER(DPCITY), UPPER(DPZIPEXT), 
+			   UPPER(DPZIP), UPPER(DPADDRLINE3), UPPER(DPADDRLINE2), UPPER(DPADDRLINE1), UPPER(DPCUSTOMERNAME) 
+	FROM TAB_STRSPOSTALADRS
+	GROUP BY UPPER(DPCOUNTRY), UPPER(DPSTATE), UPPER(DPCITY), UPPER(DPZIPEXT), 
+			 UPPER(DPZIP), UPPER(DPADDRLINE3), UPPER(DPADDRLINE2), UPPER(DPADDRLINE1), UPPER(DPCUSTOMERNAME)
+	)
+
+	OPEN cursor_name 
+
+	FETCH NEXT FROM cursor_name 
+		INTO @DPCOUNTRY, @DPSTATE, @DPCITY, @DPZIPEXT, @DPZIP, @DPADDRLINE3, @DPADDRLINE2, @DPADDRLINE1, @DPCUSTOMERNAME
+		SET @row_num = 0 
+		WHILE @@FETCH_STATUS = 0
+		BEGIN
+			SET @row_num = @row_num + 1 
+			SET @STRSENVELOPEID = RTRIM(cast(@row_num as char(6))) + '_' + @DPZIP
+		
+			UPDATE TAB_STRSPOSTALADRS SET STRSENVELOPEID = @STRSENVELOPEID WHERE DPZIP = @DPZIP
+		
+			FETCH NEXT FROM cursor_name 
+				INTO @DPCOUNTRY, @DPSTATE, @DPCITY, @DPZIPEXT, @DPZIP, @DPADDRLINE3, @DPADDRLINE2, @DPADDRLINE1, @DPCUSTOMERNAME
+		END
+		CLOSE cursor_name
+		DEALLOCATE cursor_name
+END 
+GO
+
+GRANT EXECUTE ON SP_UPDATE_POSTALADRS_ENVELOPES TO StrsSolutionDB
+GO

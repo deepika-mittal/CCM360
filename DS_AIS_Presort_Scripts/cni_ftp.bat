@@ -1,0 +1,1 @@
+scpg3 \\dca-pro1221\CCM\CNI\bin\test4.360 csbrpts@vista.serv.deco.com:/opt/csb/capture/opa

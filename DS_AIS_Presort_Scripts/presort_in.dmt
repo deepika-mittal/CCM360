@@ -1,0 +1,55 @@
+********************************************************************************
+*
+*
+* Case 5.1 module name/reference:  presort_in.dmt
+*
+*           Written:    Kashif Bhutta
+*
+*              Date:    Feb. 18, 2016
+*
+*           Version:    $Header: presort_in.dmt /main/0  11:44 UTC u05330 Exp $
+*
+*           Purpose:    Record Definition for Presort Address Input File presort_in.in
+*
+*  Passed Arguments:
+*
+*     Output Params:    None.
+*
+*       Input Files:    None.
+*
+*      Output Files:    None.
+*
+*    Called Scripts:    None
+*
+*             Exits:    End of Program.
+*
+*      Return Value:    None.
+*
+*
+*     Special Logic:    None.
+*
+********************************************************************************
+*                                Modification Log                              *
+********************************************************************************
+*
+* Programmer          Date            Description
+* ----------          ----            -----------
+*
+********************************************************************************
+Record Delimiter=010
+Field Delimiter=126
+Presrt_Flag,150,C
+DocID,150,C
+Name,150,C
+Attention_Ln,150,C
+Secondary_Add,150,C
+Add_Ln_1,150,C
+Add_Ln_2,150,C
+Add_ZIP,150,C
+Add_ZIP4,150,C
+DS_SRVCITY,150,C
+DS_State,150,C
+Add_ZipDlv,150,C
+Add_CART,150,C
+SEQ_No,150,C
+NCOA_Flag,150,C

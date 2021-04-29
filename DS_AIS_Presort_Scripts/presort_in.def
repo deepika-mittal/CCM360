@@ -1,0 +1,50 @@
+********************************************************************************
+*
+*
+* Case 5.1 module name/reference:  presort_in.def
+*
+*           Written:    Kashif Bhutta
+*
+*              Date:    Feb. 19, 2016
+*
+*           Version:    $Header: presort_in.def /main/0 UTC u05330 Exp $
+*
+*           Purpose:    Input Fields for Presort Address Input File - presort_in.csv
+*
+*  Passed Arguments:
+*
+*     Output Params:    None.
+*
+*       Input Files:    None.
+*
+*      Output Files:    None.
+*
+*    Called Scripts:    None
+*
+*             Exits:    End of Program.
+*
+*      Return Value:    None.
+*
+*
+*     Special Logic:    None.
+*
+********************************************************************************
+*                                Modification Log                              *
+********************************************************************************
+*
+* Programmer          Date            Description
+* ----------          ----            -----------
+*
+********************************************************************************
+Database Type = Delimited
+user:Account=DocID
+Name_Line=Name
+user:AddLn1=Add_Ln_1
+user:AddLn2=Add_Ln_2
+user:AddLn3=Secondary_Add
+ZIP=Add_ZIP
+ZIP4=Add_ZIP4
+user:DsSRVcity=DS_SRVCITY
+user:DsState=DS_State
+DPBC=Add_ZipDlv
+CART=Add_CART

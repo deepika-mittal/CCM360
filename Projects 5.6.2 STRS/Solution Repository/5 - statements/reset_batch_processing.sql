@@ -1,0 +1,7 @@
+update TAB_STRSINV set STRSAFPID = 'not initialized', STRSPPIDARCHIVE = 'not initialized', STRSBATCHID = 'not initialized'
+update TAB_STRSPOSTALADRS set STRSENVELOPEID = 'not initialized', STRSSSORTFILEID = 'not initialized'
+update TAB_STRSSPOOL set COMPLETEDATETIME = NULL, TRAILERRECEIVED = NULL, TOTALDOCSENT = NULL, SPOOLTITLE = NULL, STRSBATCHID = 'not initialized', STRSTRAILERJOBID = NULL
+delete from TAB_STRSBATCH
+delete from TAB_STRSPRESORTFILE
+delete from TAB_STRSPOSTALOPT
+delete from TAB_STRSAFP

@@ -1,0 +1,1 @@
+scpg3 --password=file://c:/users/maestro/pwfile D:\CCM\invoices\output\DECOB*.* sshnas@dca-pro617:"/ED/Customer Service/Customer Billing Support Services/Mail.dat/Streamserve/"
