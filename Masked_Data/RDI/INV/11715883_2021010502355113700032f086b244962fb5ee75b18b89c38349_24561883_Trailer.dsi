@@ -1,0 +1,36 @@
+H046A113000011715883EZTRAILER_DTE    PRINTER                                                                 X                                                              1STRSASCIIPRI   XSCRIPTSTRSBATCHUSER   X 8   20210203213051                                                                                    ZBIL_C360_TRAILER_SPOOL                 000000000000000 Trailer file                                                                                            1              STRS_BAT_INV                  
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+DV_G_HDR_PROCESS BIPR
+DV_G_HDR_SP_COUNT             9 
+DV_G_HDR_BATCH_DATE 20210203
+DV_G_HDR_BATCH_CYCLE 03
+DV_G_HDR_SP_TOTAL_DOC_COUNT         49 
+DV_G_HDR_RUNID EA29R
+DV_G_DTL_SP_TITLE BIPR20210203EA29R_07106012021020320355400
+DV_G_DTL_SP_NUMBER   11969418
+DV_G_DTL_SP_DOC_COUNT       30
+DV_G_DTL_SP_TITLE BIPR20210203EA29C_00100012021020321010400
+DV_G_DTL_SP_NUMBER   11969425
+DV_G_DTL_SP_DOC_COUNT       10 
+DV_G_DTL_SP_TITLE BIPR20210203EA29R_03200322021020320355000
+DV_G_DTL_SP_NUMBER   11968411
+DV_G_DTL_SP_DOC_COUNT       2 
+DV_G_DTL_SP_TITLE CBPR20210203EA58R_01500152021020321052100
+DV_G_DTL_SP_NUMBER   11969430
+DV_G_DTL_SP_DOC_COUNT       3 
+DV_G_DTL_SP_TITLE BIPR20210203EA29R_02500252021020321034500
+DV_G_DTL_SP_NUMBER   11968412
+DV_G_DTL_SP_DOC_COUNT       1 
+DV_G_DTL_SP_TITLE BIPR20210203EA29R_08203762021020320355600
+DV_G_DTL_SP_NUMBER   11969005
+DV_G_DTL_SP_DOC_COUNT       1
+DV_G_DTL_SP_TITLE BIPR20210203EA29R_04800482021020320355200
+DV_G_DTL_SP_NUMBER   11968416
+DV_G_DTL_SP_DOC_COUNT       1 
+DV_G_DTL_SP_TITLE BIPR20210203EA29R_03501142021020320355100
+DV_G_DTL_SP_NUMBER   11968188
+DV_G_DTL_SP_DOC_COUNT       1 
+
+

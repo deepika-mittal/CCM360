@@ -1,0 +1,32 @@
+H046A113000011995841EZTRAILER_DTE    PRINTER                                                                 X                                                              1STRTASCIIPRI   XSCRIPTSTRTBATCHUSER   X 8   20210201214530                                                                                    ZBIL_C360_TRAILER_SPOOL                 000000000000000 Trailer file                                                                                            1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+DV_G_HDR_PROCESS COPR
+DV_G_HDR_SP_COUNT             7 
+DV_G_HDR_BATCH_DATE 20210203
+DV_G_HDR_BATCH_CYCLE 03
+DV_G_HDR_SP_TOTAL_DOC_COUNT          102
+DV_G_HDR_RUNID CORRR
+DV_G_DTL_SP_TITLE Corresp. Printing 20210203 CORRR
+DV_G_DTL_SP_NUMBER   11946527
+DV_G_DTL_SP_DOC_COUNT        33
+DV_G_DTL_SP_TITLE Corresp. Printing 20210203 CORRP
+DV_G_DTL_SP_NUMBER   11957847
+DV_G_DTL_SP_DOC_COUNT        20 
+DV_G_DTL_SP_TITLE Corresp. Printing 20210203 CORRR
+DV_G_DTL_SP_NUMBER   11958036
+DV_G_DTL_SP_DOC_COUNT        2 
+DV_G_DTL_SP_TITLE Corresp. Printing 20210203 CORRT
+DV_G_DTL_SP_NUMBER   11970269
+DV_G_DTL_SP_DOC_COUNT        20 
+DV_G_DTL_SP_TITLE Corresp. Printing 20210203 CORRR
+DV_G_DTL_SP_NUMBER   11970422
+DV_G_DTL_SP_DOC_COUNT         5 
+DV_G_DTL_SP_TITLE Corresp. Printing 20210203 CORRW
+DV_G_DTL_SP_NUMBER   11904611
+DV_G_DTL_SP_DOC_COUNT         20 
+DV_G_DTL_SP_TITLE Corresp. Printing 20210203 CORRR
+DV_G_DTL_SP_NUMBER   11958042
+DV_G_DTL_SP_DOC_COUNT         2 
+

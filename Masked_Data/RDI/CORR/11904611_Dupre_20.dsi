@@ -1,0 +1,790 @@
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6140EF7
+DGV_COKEY 0050569203CD1EEB97868070CA4CB2D8
+DGV_OPBEL 100007661064
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6146EF7
+DGV_COKEY 0050569203CD1EEB97868070CA4CF2D8
+DGV_OPBEL 100007671118
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_STREET_UNP  Street UNP
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE614CEF7
+DGV_COKEY 0050569203CD1EEB97868070CA4E32D8
+DGV_OPBEL 100007683920
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 B
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6152EF7
+DGV_COKEY 0050569203CD1EEB97868070CA4EB2D8
+DGV_OPBEL 100007686114
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6158EF7
+DGV_COKEY 0050569203CD1EEB97868070CA4EF2D8
+DGV_OPBEL 100007687462
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE615EEF7
+DGV_COKEY 0050569203CD1EEB97868092F9E352D8
+DGV_OPBEL 100007700336
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6164EF7
+DGV_COKEY 0050569203CD1EEB97868092F9E3F2D8
+DGV_OPBEL 100007702786
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_STREET_UNP  Street UNP
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE616AEF7
+DGV_COKEY 0050569203CD1EEB97868092F9E432D8
+DGV_OPBEL 100007702786
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_STREET_UNP  Street UNP
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6170EF7
+DGV_COKEY 0050569203CD1EEB97868092F9E4F2D8
+DGV_OPBEL 100007703058
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6176EF7
+DGV_COKEY 0050569203CD1EEB97868092F9E572D8
+DGV_OPBEL 100007703181
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 G
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE617CEF7
+DGV_COKEY 0050569203CD1EEB97868092F9E5F2D8
+DGV_OPBEL 100007703488
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 G
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6182EF7
+DGV_COKEY 0050569203CD1EEB97868092F9E672D8
+DGV_OPBEL 100007704227
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_STREET_UNP  Street UNP
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:57
+DGV_COTYP 0017
+DGV_LTRCD CRB
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFCDBE6188EF7
+DGV_COKEY 0050569203CD1EEB978680B99587B359
+DGV_OPBEL 100007705113
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_SL_LNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 R
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:32
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFB846698AEF3
+DGV_COKEY 00505692287A1EEB96ED63EA9CE56C08
+DGV_OPBEL 100007710004
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_STREET_UNP  Street UNP
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 B
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:32
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFC69EE73CEF7
+DGV_COKEY 00505692287A1EEB96EDB72455750E09
+DGV_OPBEL 100007706554
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_STREET_UNP  Street UNP
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:32
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFC69EE748EF7
+DGV_COKEY 00505692287A1EEB96EDB74A0BDB6E09
+DGV_OPBEL 100007709811
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:32
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFC69EE772EF7
+DGV_COKEY 00505692287A1EEB96EDB74A0BDFAE09
+DGV_OPBEL 100007710209
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_STREET_UNP  Street UNP
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 B
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:32
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFC8FE0F48EF7
+DGV_COKEY 00505692287A1EEB96EDB76FBF100E09
+DGV_OPBEL 100007710533
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_STREET_UNP  Street UNP
+DGV_ML_STREET_UNT DRIVEUP
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 G
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:53
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFC8FE0F7EEF7
+DGV_COKEY 00505692287A1EEB96EDB8C79BCE6E14
+DGV_OPBEL 100007703500
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN
+
+
+H046A113000011904611EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRT017           8   00000000000000                                 FRM_CS_1.3_002_New Customer Welcome Letter         /1PWB/SAPL30020160609181108             000000000000000 Corresp. Printing 20210203 CORRW                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_CS_1_3_002 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 01/21/2021
+DGV_TIME 21:16:53
+DGV_COTYP 0017
+DGV_LTRCD CRC
+DGV_RICEFW FRM_CS_1.3_002
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB978AFC8FE0F90EF7
+DGV_COKEY 00505692287A1EEB96EDB8C79BD0AE14
+DGV_OPBEL 100007707102
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_TXT1 E
+DGV_TXT2 C
+CRDI-CONTROL %%LINES-END TE_CS_1_3_002 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_WCLTR_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_WCLTR_DOC_END TEXT ST EN

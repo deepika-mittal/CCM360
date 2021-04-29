@@ -1,0 +1,195 @@
+H046A113000011970422EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRS006           8   00000000000000                                 C360_FRM_BILL_3.XXX Application form               /1PWB/SAPL30020160609181143             000000000000000 Corresp. Printing 20210203 CORRR                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_3 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 02/03/2021
+DGV_TIME 21:22:32
+DGV_COTYP 0013
+DGV_LTRCD LBLNEW
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB98A1F5C77D253A45
+DGV_COKEY 0050569203CD1EDB98A12FE698BD2B0D
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_PREM_ADR_CITY TEST PREM CITY
+DGV_PREM_ADR_POST_CODE 123456-7891
+DGV_PREM_ADR_REGION TEST_REGION
+DGV_PREM_ADR_LN1 TEST PREMISE NAME
+DGV_PREM_ADR_LN2 ADDRESS LINE 2
+DGV_PRINTDOC 200012717743
+CRDI-CONTROL %%LINES-END TE_BI_3 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-END TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_END TEXT ST EN
+
+
+H046A113000011970422EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRS006           8   00000000000000                                 C360_FRM_BILL_3.XXX Application form               /1PWB/SAPL30020160609181143             000000000000000 Corresp. Printing 20210203 CORRR                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_3 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 02/03/2021
+DGV_TIME 21:22:32
+DGV_COTYP 0013
+DGV_LTRCD LBLNEW
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB98A1F5C77D23DA45
+DGV_COKEY 0050569203CD1EDB98A12C68FEE04AC7
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_PO_BOX  121212
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_COUNTRY US
+DGV_PREM_ADR_CITY TEST PREM CITY
+DGV_PREM_ADR_POST_CODE 123456-7891
+DGV_PREM_ADR_REGION TEST_REGION
+DGV_PREM_ADR_LN1 TEST PREMISE NAME
+DGV_PREM_ADR_LN2 ADDRESS LINE 2
+DGV_PRINTDOC 200032716899
+CRDI-CONTROL %%LINES-END TE_BI_3 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-END TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_END TEXT ST EN
+
+
+H046A113000011970422EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRS006           8   00000000000000                                 C360_FRM_BILL_3.XXX Application form               /1PWB/SAPL30020160609181143             000000000000000 Corresp. Printing 20210203 CORRR                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_3 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 02/03/2021
+DGV_TIME 21:22:32
+DGV_COTYP 0013
+DGV_LTRCD LBL30
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB98A1F5ECC557FA45
+DGV_COKEY 0050569252D91EEB98A1A994BBE7B5E8
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_PO_BOX  121212
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_COUNTRY US
+DGV_PRINTDOC 400020122395
+CRDI-CONTROL %%LINES-END TE_BI_3 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-END TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_END TEXT ST EN
+
+
+H046A113000011970422EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRS006           8   00000000000000                                 C360_FRM_BILL_3.XXX Application form               /1PWB/SAPL30020160609181143             000000000000000 Corresp. Printing 20210203 CORRR                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_3 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 02/03/2021
+DGV_TIME 21:22:32
+DGV_COTYP 0013
+DGV_LTRCD LBLFIN
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB98A1F5ECC5583A45
+DGV_COKEY 0050569252D91EEB98A1A994BBE915E8
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_PO_BOX  121212
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_COUNTRY US
+DGV_PRINTDOC 400020122396
+CRDI-CONTROL %%LINES-END TE_BI_3 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-END TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_END TEXT ST EN
+
+
+H046A113000011970422EZF_CORR_01      PRINTER                                                                 X                                                              1STRTASCIIPRI X  SCRIPTSTRS006           8   00000000000000                                 C360_FRM_BILL_3.XXX Application form               /1PWB/SAPL30020160609181143             000000000000000 Corresp. Printing 20210203 CORRR                                                                        1              STRS_BAT_CORR                 
+S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+CCODEPAGE 4103 LANGUAGE EN
+CPAGENAME FIRST
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_START TEXT ST EN
+DGV_DOC_START_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_START TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_3 TEXT ST EN
+DGV_MANDT 300
+DGV_SYSID PI6
+DGV_UNAME BATCHUSER
+DGV_DATE 02/03/2021
+DGV_TIME 21:22:32
+DGV_COTYP 0013
+DGV_LTRCD LBL30
+DGV_BATCH_DT 02/03/2021
+DGV_SENDCONTROL STND
+DGV_GUID 00505692287A1EEB98A1F5ECC5587A45
+DGV_COKEY 0050569252D91EEB98A1A994BBEA55E8
+DGV_CA1 999999999999
+DGV_BP1 11111111111
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_ML_NAME TESTFNAME TESTLNAME
+DGV_SL_FNAME TESTFNAME TESTLNAME
+DGV_ML_STREET_NBR STREET NBR 12345
+DGV_ML_STREET_NAM STREET NAME 12345
+DGV_ML_CITY TEST CITY
+DGV_ML_REGION TEST_RGN
+DGV_ML_POST_CODE 123456-7890
+DGV_ML_COUNTRY US
+DGV_PRINTDOC 400020122397
+CRDI-CONTROL %%LINES-END TE_BI_3 TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-END TE_BI_REPEAT_FIELDS TEXT ST EN
+CRDI-CONTROL %%LINES-BEGIN TE_BI_DOC_END TEXT ST EN
+DGV_DOC_END_X X
+CRDI-CONTROL %%LINES-END TE_BI_DOC_END TEXT ST EN
+
