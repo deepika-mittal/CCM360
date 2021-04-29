@@ -1,0 +1,13 @@
+delete from TAB_STRSJOBAUDIT
+delete from TAB_STRSINV
+delete from TAB_STRSCORR
+delete from TAB_STRSCOCM
+delete from TAB_STRSEBILL
+delete from TAB_STRSPOSTALADRS
+delete from TAB_STRSPOSTALOPT
+delete from TAB_STRSPRESORTFILE
+delete from TAB_STRSBATCH
+delete from TAB_STRSNOTIFICATIONS
+delete from TAB_STRSSPOOL
+delete from TAB_STRSINSERTS
+delete from TAB_STRSAFP
